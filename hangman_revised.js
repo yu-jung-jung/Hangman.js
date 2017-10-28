@@ -32,7 +32,7 @@ var Letter = function(let){
 //
 
 var Word = function(wor){
-
+ 
 	this.word = wor;
 	this.letters = [];
 	this.wordFound = false;
@@ -164,7 +164,7 @@ var prompt = function(){
 		//this.guesses
 		// how can i make it lower case
 
-		var lower = toLowerCase(let.second);
+		var lower = let.second.toLowerCase();
 
 		for(var i = 0; i < guesses.length; i++){
 			if(lower === guesses[i]){
@@ -175,6 +175,7 @@ var prompt = function(){
 		}
 
 		if(duplicated === false){
+
 			guesses.push(lower);
 
 			var found = current.checkMatch(lower);
